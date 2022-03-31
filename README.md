@@ -1,3 +1,5 @@
+Все команды были выполнены в терминале linux. Текст этого - в папке proof. Скриншоты с разных стадий выполением задания - в папке screenshots.
+
 Анализ проводили для клеточной линии NH-A (т.к. не было файлов для GM23248). Были взяты следующие метки:
 NH-A	H3k4me3	H3K4me3StdAlnRep1.bam	ControlStdAlnRep1.bam
 NH-A	H3k4me1	H3K4me1StdAlnRep1.bam	ControlStdAlnRep1.bam
