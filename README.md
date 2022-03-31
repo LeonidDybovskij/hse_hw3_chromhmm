@@ -9,6 +9,7 @@ NH-A	H3k9me3	H3K9me3StdAlnRep1.bam	ControlStdAlnRep1.bam
 NH-A	H3k4me2	H3K4Me2StdAlnRep1.bam	ControlStdAlnRep1.bam
 NH-A	H3k9ac	H3K9acStdAlnRep1.bam	ControlStdAlnRep1.bam
 NH-A	H4k20me1	H4K20me1StdAlnRep1.bam	ControlStdAlnRep1.bam
+
 Определение паттернов состояний было основано на этих двух графиках:
 
 ![emissions_10](https://user-images.githubusercontent.com/60808642/161118736-35671ce5-560e-439a-b603-3a98419fbecc.png)
