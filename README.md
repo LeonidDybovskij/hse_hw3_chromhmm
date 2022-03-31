@@ -7,6 +7,7 @@
 | git diff | Show file differences that haven't been staged |
 
 |NH-A|H3k4me3|H3K4me3StdAlnRep1.bam|ControlStdAlnRep1.bam|
+|---|---|---|---| 
 |NH-A|H3k4me1|H3K4me1StdAlnRep1.bam|ControlStdAlnRep1.bam|
 |NH-A|H3k27ac|H3K27acStdAlnRep1.bam|ControlStdAlnRep1.bam|
 |NH-A|H3k36me3|H3K36me3StdAlnRep1.bam|ControlStdAlnRep1.bam|
