@@ -43,5 +43,6 @@
 
 Полученная схема в UCSC Genome browser выглядит так:
 
-![12](https://user-images.githubusercontent.com/60808642/161147246-54425bb4-ddd6-422f-bea3-d61bdfeef31c.png)
+![13](https://user-images.githubusercontent.com/60808642/161148019-f6395f2f-aff2-4992-a88f-4d478fe423ee.png)
+
 
