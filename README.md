@@ -1,13 +1,10 @@
 Все команды были выполнены в терминале linux. Текст этого - в папке proof. Скриншоты с разных стадий выполением задания - в папке screenshots. Вся выдача ChromHMM - в папке ChromHMM_out (за исключением NH-A_10_dense.bed, размер которого > 25 Мб).
 
-Анализ проводили для клеточной линии NH-A (т.к. не было файлов для GM23248). Были взяты следующие метки:
-| Command | Description |
-| --- | --- |
-| git status | List all new or modified files |
-| git diff | Show file differences that haven't been staged |
+Анализ проводили для клеточной линии NH-A (т.к. не было файлов для GM23248). Ниже представлен файл cellmarkfiletable.txt, переведённый в таблицу и с добавлением заголовков.
 
-|NH-A|H3k4me3|H3K4me3StdAlnRep1.bam|ControlStdAlnRep1.bam|
+|Тип клеток|Метка|Файл с данными|Контроль| 
 |---|---|---|---| 
+|NH-A|H3k4me3|H3K4me3StdAlnRep1.bam|ControlStdAlnRep1.bam|
 |NH-A|H3k4me1|H3K4me1StdAlnRep1.bam|ControlStdAlnRep1.bam|
 |NH-A|H3k27ac|H3K27acStdAlnRep1.bam|ControlStdAlnRep1.bam|
 |NH-A|H3k36me3|H3K36me3StdAlnRep1.bam|ControlStdAlnRep1.bam|
