@@ -22,6 +22,6 @@
 ![emissions_10](https://user-images.githubusercontent.com/60808642/161118736-35671ce5-560e-439a-b603-3a98419fbecc.png)
 ![NH-A_10_overlap](https://user-images.githubusercontent.com/60808642/161118743-e85be7c5-8053-42ee-a79f-d21066e7840d.png)
 
-А также на основе локализации генов и гистоновых меток из UCSC Genome Browser:
+А также с помощью локализации генов и гистоновых меток из UCSC Genome Browser:
 
 ![10](https://user-images.githubusercontent.com/60808642/161123041-3e5ecb6e-3b0c-4ac1-ac2d-7c43133d12b5.png)
