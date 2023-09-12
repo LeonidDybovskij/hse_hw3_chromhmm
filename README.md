@@ -1,14 +1,26 @@
-# Аннотация генома человека на типы эпигенетических состояний.
+# Annotation of the human genome into different types of epigenetic states.
 
-[Ссылка на README на русском](README.ru.md)
+[This README in russian](README.ru.md)
 
-Разбивка по типам была проведена для астроцитов NH-A (т.к. не было файлов для GM23248).
+The annotation was done based on histone modifications data.  
+This data was taken from the [ENCODE project](https://www.encodeproject.org/).  
+So, reads obtained from ChIP-seq experiments were aligned to the human genome (version hg19).  
+And the resulting .bam files were taken for this annotation.
 
-Все команды были выполнены в терминале linux. Текст этого - в папке proof. Скриншоты с разных стадий выполением задания - в папке screenshots. Вся выдача ChromHMM - в папке ChromHMM_out (за исключением NH-A_10_dense.bed, размер которого > 25 Мб).
+Automatic annotation of the genome into epigenetic types was carried out using the ChromHMM program.
+As a result of the iterative procedure (Baum-Welsh algorithm), the program determines the combination of histone marks that are typical for each of the N different epigenetic types.
+The biological aim of this annotation was to manually assign a possible biological function to each of the N epigenetic types based on indirect independent observations.
 
-Ниже представлен файл cellmarkfiletable.txt, переведённый в таблицу (с добавлением заголовков).
+The annotation by type was performed for NH-A astrocytes (as there were no files for GM23248).
 
-|Тип клеток|Метка|Файл с данными|Контроль| 
+All commands were executed in the Linux terminal.  
+The text of this is in the proof folder.  
+Screenshots from different stages of the task are in the screenshots folder.  
+All ChromHMM output is in the ChromHMM_out folder (with the exception of NH-A_10_dense.bed, the size of which is > 25 MB).
+
+Below is the cellmarkfiletable.txt file with headers added.
+
+|Cell type|Histone mark|Data file|Control| 
 |---|---|---|---| 
 |NH-A|H3k4me3|H3K4me3StdAlnRep1.bam|ControlStdAlnRep1.bam|
 |NH-A|H3k4me1|H3K4me1StdAlnRep1.bam|ControlStdAlnRep1.bam|
@@ -21,32 +33,30 @@
 |NH-A|H3k9ac|H3K9acStdAlnRep1.bam|ControlStdAlnRep1.bam|
 |NH-A|H4k20me1|H4K20me1StdAlnRep1.bam|ControlStdAlnRep1.bam|
 
-Определение паттернов состояний было основано на этих двух графиках:
+The definition of state patterns was based on these two graphs:
 
 ![emissions_10](https://user-images.githubusercontent.com/60808642/161118736-35671ce5-560e-439a-b603-3a98419fbecc.png)
 ![NH-A_10_overlap](https://user-images.githubusercontent.com/60808642/161118743-e85be7c5-8053-42ee-a79f-d21066e7840d.png)
 
-А также с помощью локализации генов и гистоновых меток из UCSC Genome Browser:
+As well as using gene localization and histone marks from the UCSC Genome Browser:
 
 ![10](https://user-images.githubusercontent.com/60808642/161123041-3e5ecb6e-3b0c-4ac1-ac2d-7c43133d12b5.png)
 
-|Тип|Характерные метки|Характерные свойства|Название| 
+|Type|Typical marks|Typical features|Label| 
 |---|---|---|---| 
-|1|H3k9me3, H3k27me3, H3k4me2|CpG островки, Референсные экзоны, референсные сайты окончания транскрипции, ассоциированные с ядерной ламиной домены|Слабый промотор|
-|2|-|Значительная часть генома, ассоциированные с ядерной ламиной домены|Репрессированный гетерохроматин|
-|3|H3k20me1, H3k36me3|Референсные гены, референсные сайты откончания транскрипции|Области начала транскрипции|
-|4|H3k79me2, H4k20me1, H3k36me3|Референсные экзоны, референсные гены, референсные сайты окончания транскрипции|Область элонгации транскрипции|
-|5|H3k79me2, H4k20me1|Референсные гены|Участки, репрессированные белками polycomb|
-|6|H3k79me2|Референсные гены|Интроны|
-|7|H3k4me3, H3k9ac, H3k4me2, H3k27a, H3k4me1, H3k79me2, H4k20me1|Референсные экзоны, референсные гены, референсные сайты окончания транскрипции, отстоящие на 2 килобазы от сайтов начала транскрипции области|Сильный энхансер|
-|8|H3k4me2, H3k4me1|Референсные сайты окончания транскрипции, ассоциированные с ядерной ламиной домены|Слабый энхансер|
-|9|H3k9ac, H3k4me2, H3k27ac, H3k4me1|Рефересные гены, референсные сайты окончания транскрипции, ассоциированные с ядерной ламиной домены|Инсулятор|
-|10|H3k4me3, H3k9ac, H3k4me2|CpG островки, референсные экзоны, референсные гены, референсные сайты окончания транскрипции, рефересные сайты начала транскрипции, отстоящие на 2 килобазы от сайтов начала транскрипции области|Активный промотор|
+|1|H3k9me3, H3k27me3, H3k4me2|CpG islands, reference exons, transcription termination reference sites, nuclear lamina associated domains|Weak promoter|
+|2|-|A significant part of the genome, nuclear lamina associated domains|Repressed heterochromatin|
+|3|H3k20me1, H3k36me3|Reference genes, transcription termination reference sites|Transcription start regions|
+|4|H3k79me2, H4k20me1, H3k36me3|Reference exons, reference genes, transcription termination reference sites|Transcription elongation region|
+|5|H3k79me2, H4k20me1|Reference genes|Regions repressed by polycomb proteins|
+|6|H3k79me2|Reference genes|Introns|
+|7|H3k4me3, H3k9ac, H3k4me2, H3k27a, H3k4me1, H3k79me2, H4k20me1|Reference exons, reference genes, transcription termination reference sites, regions spaced 2 kilobases from transcription start sites|Strong enhancer|
+|8|H3k4me2, H3k4me1|Transcription termination reference sites, nuclear lamina associated domains|Weak enhancer|
+|9|H3k9ac, H3k4me2, H3k27ac, H3k4me1|Reference genes, transcription termination reference sites, nuclear lamina associated domains|Insulator|
+|10|H3k4me3, H3k9ac, H3k4me2|CpG islands, reference exons, reference genes, transcription termination reference sites, transcription start reference sites, regions spaced 2 kilobases from transcription start sites|Active promoter|
 
-Для модификации .bed файла и отображения этих типов был написан скрипт на python (папка src). К сожалению, полученный .bed файл всё ещё слишком большой, так что есть только его скриншот.
+To modify the .bed file and display these types, a script was written in python (src folder). Unfortunately, the resulting .bed file is still too large, so there is only a screenshot of it.
 
-Полученная схема в UCSC Genome browser выглядит так:
+The resulting diagram in the UCSC Genome browser looks like:
 
 ![13](https://user-images.githubusercontent.com/60808642/161148019-f6395f2f-aff2-4992-a88f-4d478fe423ee.png)
-
-
