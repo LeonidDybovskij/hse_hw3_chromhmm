@@ -1,7 +1,5 @@
 # Annotation of the human genome into different types of epigenetic states.
 
-[This README in russian](README.ru.md)
-
 The annotation was done based on histone modifications data.  
 This data was taken from the [ENCODE project](https://www.encodeproject.org/).  
 So, reads obtained from ChIP-seq experiments were aligned to the human genome (version hg19).  
