@@ -58,3 +58,4 @@ To modify the .bed file and display these types, a script was written in python 
 The resulting diagram in the UCSC Genome browser looks like:
 
 ![13](https://user-images.githubusercontent.com/60808642/161148019-f6395f2f-aff2-4992-a88f-4d478fe423ee.png)
+
